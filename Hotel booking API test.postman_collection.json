@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "ef10c0b9-a2a0-4685-8800-31c7b982cc52",
+		"name": "Hotel booking API test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40194763"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test should be 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 1 sec\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Response should be JSON\", function() {\r",
+							"    pm.response.to.be.json;\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Check rooms array is not empty\", function () {\r",
+							"    pm.expect(jsonData.rooms).to.be.an(\"array\").that.is.not.empty;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Whole room has 'roomid', 'roomName' and 'type'\", function () {\r",
+							"    jsonData.rooms.forEach(room => {\r",
+							"        pm.expect(room).to.have.property(\"roomid\");\r",
+							"        pm.expect(room).to.have.property(\"roomName\");\r",
+							"        pm.expect(room).to.have.property(\"type\");\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Whole room has 3 features\", function () {\r",
+							"    jsonData.rooms.forEach(room => {\r",
+							"        pm.expect(room.features).to.have.lengthOf(3);\r",
+							"    });\r",
+							"});\r",
+							"    \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://automationintesting.online/api/room",
+					"protocol": "https",
+					"host": [
+						"automationintesting",
+						"online"
+					],
+					"path": [
+						"api",
+						"room"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
