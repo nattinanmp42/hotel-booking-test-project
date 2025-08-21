@@ -15,8 +15,8 @@ A personal portfolio project to demonstrate my software testing skills across **
 
 ## 📄 Project Files
 
-- 📋 **Test Case**: [Project Hotel Booking - Test case.pdf](./Project%20Hotel%20Booking%20-%20Test%20case.pdf)  
-- 🐞 **Bug Report**: [Project Hotel Booking - Bug report.pdf](./Project%20Hotel%20Booking%20-%20Bug%20report.pdf)  
+- 📋 **Test Case**: https://docs.google.com/spreadsheets/d/1QrUV4QZT-pJN4o1M1Jahw1g5JCQEe6GhlGJl6xrsZ80/edit?gid=0#gid=0
+- 🐞 **Bug Report**: https://docs.google.com/spreadsheets/d/1QrUV4QZT-pJN4o1M1Jahw1g5JCQEe6GhlGJl6xrsZ80/edit?gid=1856942161#gid=1856942161
 - 🔁 **Postman Collection**: [Hotel booking API test.postman_collection.json](./Hotel%20booking%20API%20test.postman_collection.json)  
 - 📊 **SQL Queries**: [sample-queries.sql](./sample-queries.sql)
 
